@@ -31,4 +31,12 @@
         app:layout_constraintTop_toBottomOf="@id/bt_led_2"
         android:text="Led 3"/>
 
+    <Button
+        android:id="@+id/bt_conectar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_led_3"
+        android:text="Conectar"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

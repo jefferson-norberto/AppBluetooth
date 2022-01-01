@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ListasDispositivos"
+            android:theme="@android:style/Theme.Material.Dialog"
+            android:label="Dispositivos Pareados"
+            />
     </application>
 
 </manifest>
