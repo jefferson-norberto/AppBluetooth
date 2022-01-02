@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btConectar, btLed1, btLed2, btLed3;
     boolean conection = false;
 
+    private static String MAC = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "Bluetooth não ativado, encerrando app", Toast.LENGTH_SHORT).show();
                     finish();
                     break;
+                }
+            case SOLICITAR_CONEXAO:
+                if(resultCode == Activity.RESULT_OK){
+                    MAC = data.getExtras().getString(ListasDispositivos.ENDERECO_MAC);
+                    Toast.makeText(this, "MAC final: "+MAC, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Falha ao obter o MAC", Toast.LENGTH_SHORT).show();
                 }
 
         }
